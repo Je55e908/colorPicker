@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>color Picker</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .red{
+      background-color:red;
+    }
+    .beige{
+      background-color:beige;
+    }
+    .grey{
+      background-color:grey;
+    }
+    .brown{
+      background-color:saddlebrown;
+    }
+    .green{
+      background-color:green;
+    }
+    .blue{
+      background-color:blue;
+    }
+    .lavender{
+      color:lavender;
+    }
+    .orange{
+      color:orange;
+    }
+    .yellow{
+      color:yellow;
+    }
+    .pink{
+      color:pink;
+    }
+    .teal{
+      color:teal;
+    }
+    .purple{
+      color:purple;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non arcu risus quis varius quam. Fermentum leo vel orci porta non pulvinar. Nulla porttitor massa id neque aliquam vestibulum. Risus quis varius quam quisque. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Aliquet enim tortor at auctor urna nunc id. Pretium nibh ipsum consequat nisl vel pretium. Egestas diam in arcu cursus euismod quis viverra. Vitae elementum curabitur vitae nunc. Tempor nec feugiat nisl pretium fusce id velit. In egestas erat imperdiet sed euismod nisi. Facilisis magna etiam tempor orci eu lobortis elementum nibh.
+
+      Cursus mattis molestie a iaculis. Ultrices eros in cursus turpis massa. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Sed risus ultricies tristique nulla aliquet. Tortor condimentum lacinia quis vel. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Enim sit amet venenatis urna cursus eget nunc scelerisque viverra. Enim ut tellus elementum sagittis vitae. Nunc mattis enim ut tellus elementum sagittis vitae. Sed faucibus turpis in eu mi bibendum neque egestas. Rhoncus est pellentesque elit ullamcorper. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Ut venenatis tellus in metus.
+
+      Hendrerit gravida rutrum quisque non tellus. Sapien pellentesque habitant morbi tristique senectus. Augue neque gravida in fermentum et sollicitudin ac. Ac auctor augue mauris augue neque gravida in fermentum et. Faucibus a pellentesque sit amet. Amet nisl purus in mollis nunc. Nec dui nunc mattis enim ut tellus. Etiam sit amet nisl purus. Eros in cursus turpis massa tincidunt dui ut ornare lectus. Facilisis gravida neque convallis a cras. Duis at tellus at urna condimentum mattis pellentesque. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut. Metus vulputate eu scelerisque felis imperdiet. Tincidunt lobortis feugiat vivamus at augue eget arcu. Ultricies mi eget mauris pharetra et ultrices neque ornare. Id neque aliquam vestibulum morbi blandit cursus risus. Pretium lectus quam id leo in vitae. Mauris pellentesque pulvinar pellentesque habitant morbi tristique. Proin sed libero enim sed. In ornare quam viverra orci sagittis.
+
+      Dictum sit amet justo donec. Pellentesque sit amet porttitor eget dolor morbi non. Elementum sagittis vitae et leo duis ut diam quam nulla. Orci a scelerisque purus semper eget duis at tellus. Eget arcu dictum varius duis at consectetur. Lectus magna fringilla urna porttitor rhoncus dolor purus. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Vitae semper quis lectus nulla at. Parturient montes nascetur ridiculus mus. Orci porta non pulvinar neque laoreet suspendisse interdum. Ipsum a arcu cursus vitae congue. Eu turpis egestas pretium aenean pharetra.</p>
+    <div class="row">
+      <h3>Background</h3>
+      <button id="1">RED</button>
+      <button id="2">GREEN</button>
+      <button id="3">BLUE</button>
+      <button id="4">BEIGE</button>
+      <button id="5">GREY</button>
+      <button id="6">BROWN</button>
+    </div>
+    <div class="row">
+      <h3>Text</h3>
+      <button id="7">PINK</button>
+      <button id="8">TEAL</button>
+      <button id="9">PURPLE</button>
+      <button id="10">LAVENDER</button>
+      <button id="11">ORANGE</button>
+      <button id="12">YELLOW</button>
+    </div>
+    <button id="clear">CLEAR</button>
+  </div>
+</div>
+<script>
+  const content = document.querySelector('.content')
+  const red = document.getElementById('1')
+  const green = document.getElementById('2')
+  const blue = document.getElementById('3')
+  const beige = document.getElementById('4')
+  const grey = document.getElementById('5')
+  const brown = document.getElementById('6')
+
+  const pink = document.getElementById('7')
+  const teal = document.getElementById('8')
+  const purple = document.getElementById('9')
+  const lavender = document.getElementById('10')
+  const orange = document.getElementById('11')
+  const yellow = document.getElementById('12')
+
+  const clearButton = document.getElementById('clear')
+
+  red.addEventListener('click', function(e){
+    removeBGColor();
+    content.classList.add('red');
+  });
+
+  green.addEventListener('click', function(e){
+    removeBGColor();
+    content.classList.add('green');
+  });
+
+  blue.addEventListener('click', function(e){
+    removeBGColor();
+    content.classList.add('blue');
+  });
+
+  beige.addEventListener('click', function(e){
+    removeBGColor();
+    content.classList.add('beige');
+  });
+
+  grey.addEventListener('click', function(e){
+    removeBGColor();
+    content.classList.add('grey');
+  });
+
+  brown.addEventListener('click', function(e){
+    removeBGColor();
+    content.classList.add('brown');
+  });
+
+  pink.addEventListener('click', function(e){
+    removeTextColor();
+    content.classList.add('pink');
+  });
+
+  teal.addEventListener('click', function(e){
+    removeTextColor();
+    content.classList.add('teal');
+  });
+
+  purple.addEventListener('click', function(e){
+    removeTextColor();
+    content.classList.add('purple');
+  });
+
+  lavender.addEventListener('click', function(e){
+    removeTextColor();
+    content.classList.add('lavender');
+  });
+
+  orange.addEventListener('click', function(e){
+    removeTextColor();
+    content.classList.add('orange');
+  });
+
+  yellow.addEventListener('click', function(e){
+    removeTextColor();
+    content.classList.add('yellow');
+  });
+  function removeBGColor(){
+    content.classList.remove('red');
+    content.classList.remove('blue');
+    content.classList.remove('green');
+    content.classList.remove('purple');
+    content.classList.remove('beige');
+    content.classList.remove('grey');
+    content.classList.remove('brown');
+  }
+
+  function removeTextColor(){
+    content.classList.remove('pink');
+    content.classList.remove('teal');
+    content.classList.remove('purple');
+    content.classList.remove('lavender');
+    content.classList.remove('orange');
+    content.classList.remove('yellow');
+  }
+
+  clearButton.addEventListener('click', function(e){
+    removeTextColor();
+    removeBGColor();
+  });
+
+</script>
+</body>
+</html>
